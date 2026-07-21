@@ -77,15 +77,6 @@
   transform: translateY(-1px);
 }
 
-.project-card-tag {
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  font-weight: 500;
-  background: var(--primary-soft);
-  color: var(--primary);
-}
-
 .about-detail {
   padding: 0.75rem 1rem;
   border-radius: 8px;
