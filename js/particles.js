@@ -13,26 +13,26 @@ const Particles = (() => {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
     const geometry = new THREE.BufferGeometry();
-    const count = 2000;
+    const count = 1500;
     const positions = new Float32Array(count * 3);
 
     for (let i = 0; i < count * 3; i++) {
-      positions[i] = (Math.random() - 0.5) * 10;
+      positions[i] = (Math.random() - 0.5) * 14;
     }
 
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
     const material = new THREE.PointsMaterial({
-      size: 0.008,
-      color: 0xa48fff,
+      size: 0.012,
+      color: 0xffffff,
       transparent: true,
-      opacity: 0.6,
+      opacity: 0.45,
       blending: THREE.AdditiveBlending,
     });
 
     particles = new THREE.Points(geometry, material);
     scene.add(particles);
-    camera.position.z = 3;
+    camera.position.z = 4;
 
     bindEvents();
     animate();
@@ -54,10 +54,10 @@ const Particles = (() => {
   function animate() {
     requestAnimationFrame(animate);
 
-    particles.rotation.x += 0.00005;
-    particles.rotation.y += 0.00005;
-    particles.rotation.x += (mouseY * 0.02 - particles.rotation.x) * 0.001;
-    particles.rotation.y += (mouseX * 0.02 - particles.rotation.y) * 0.001;
+    particles.rotation.x += 0.00004;
+    particles.rotation.y += 0.00004;
+    particles.rotation.x += (mouseY * 0.015 - particles.rotation.x) * 0.001;
+    particles.rotation.y += (mouseX * 0.015 - particles.rotation.y) * 0.001;
 
     renderer.render(scene, camera);
   }

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>zwitn — Software Engineer</title>
-  <meta name="description" content="zwitn - Software Engineer portfolio. Crafting elegant digital experiences with modern technologies." />
+  <meta name="description" content="zwitn - Software Engineer. Building fast, modern, and elegant digital experiences." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <link rel="stylesheet" href="css/variables.css" />
@@ -20,43 +20,62 @@
 </head>
 <body>
 
+<div id="preloader">
+  <div class="preloader-logo">z<span class="preloader-cursor">_</span></div>
+</div>
+
+<div id="scroll-progress"></div>
+<div id="cursor-glow"></div>
+
 <canvas id="particles-canvas"></canvas>
 
 <nav class="nav" id="nav">
-  <span class="nav-logo">zwitn</span>
+  <a href="#hero" class="nav-logo">zwitn<span class="nav-logo-dot">.</span></a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#skills" class="nav-link">Skills</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#experience" class="nav-link">Experience</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
   </ul>
+  <a href="#contact" class="btn btn-primary nav-cta">Hire Me</a>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
 </nav>
 
-<section class="hero">
+<header class="hero" id="hero">
   <div class="hero-content">
-    <div class="hero-badge">
-      <span class="dot"></span> Available for opportunities
+    <div class="hero-badge reveal">
+      <span class="hero-badge-dot"></span> Available for opportunities
     </div>
-    <h1>
-      Building digital<br />
-      <span class="gradient-text">experiences</span>
+    <p class="hero-code reveal reveal-delay-1">&lt;software_engineer&gt;</p>
+    <h1 class="hero-title reveal reveal-delay-2">
+      zwitn<span class="hero-title-dot">.</span>
     </h1>
-    <div class="typing-wrapper">
-      <span id="typing-text"></span><span class="cursor"></span>
+    <div class="hero-typing reveal reveal-delay-3">
+      <span class="hero-typing-prefix">$</span> <span id="typing-text"></span><span class="cursor"></span>
     </div>
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View My Work</a>
-      <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Get In Touch</a>
+    <p class="hero-desc reveal reveal-delay-4">
+      I build fast, modern, and elegant digital experiences —<br />
+      from Discord bots to full-stack web applications.
+    </p>
+    <div class="hero-cta reveal reveal-delay-5">
+      <a href="#projects" class="btn btn-primary"><i class="fas fa-arrow-down"></i> View My Work</a>
+      <a href="#contact" class="btn btn-outline"><i class="fas fa-terminal"></i> Get In Touch</a>
     </div>
-    <div class="hero-stats">
+    <div class="hero-stats reveal reveal-delay-6">
       <div class="hero-stat">
-        <div class="hero-stat-num"><span class="count-up" data-target="5">0</span>+</div>
+        <div class="hero-stat-num"><span class="count-up" data-target="5">0</span><span class="hero-stat-plus">+</span></div>
         <div class="hero-stat-label">Years Coding</div>
       </div>
+      <div class="hero-stat-divider"></div>
       <div class="hero-stat">
-        <div class="hero-stat-num"><span class="count-up" data-target="10">0</span>+</div>
+        <div class="hero-stat-num"><span class="count-up" data-target="10">0</span><span class="hero-stat-plus">+</span></div>
         <div class="hero-stat-label">Projects</div>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-num"><span class="count-up" data-target="1">0</span></div>
+        <div class="hero-stat-label">npm Package</div>
       </div>
     </div>
   </div>
@@ -64,32 +83,66 @@
     <div class="mouse"><div class="wheel"></div></div>
     <span>Scroll</span>
   </div>
-</section>
+</header>
 
-<section id="about">
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Software Engineer</span><span class="marquee-sep">✦</span>
+    <span>Full-Stack Developer</span><span class="marquee-sep">✦</span>
+    <span>Discord Bot Developer</span><span class="marquee-sep">✦</span>
+    <span>Open Source</span><span class="marquee-sep">✦</span>
+    <span>TypeScript</span><span class="marquee-sep">✦</span>
+    <span>React</span><span class="marquee-sep">✦</span>
+    <span>Node.js</span><span class="marquee-sep">✦</span>
+    <span>Software Engineer</span><span class="marquee-sep">✦</span>
+    <span>Full-Stack Developer</span><span class="marquee-sep">✦</span>
+    <span>Discord Bot Developer</span><span class="marquee-sep">✦</span>
+    <span>Open Source</span><span class="marquee-sep">✦</span>
+    <span>TypeScript</span><span class="marquee-sep">✦</span>
+    <span>React</span><span class="marquee-sep">✦</span>
+    <span>Node.js</span><span class="marquee-sep">✦</span>
+  </div>
+</div>
+
+<section id="about" class="section">
   <div class="container">
-    <div class="section-label fade-in"><i class="fas fa-user"></i> About Me</div>
-    <div class="about-content fade-in">
-      <div class="about-text">
-        <h3>Software Engineer passionate about <span class="gradient-text-accent">crafting elegant solutions</span></h3>
-        <p>I'm a dedicated software engineer with a passion for building modern, performant, and user-centric applications. I thrive on turning complex problems into simple, beautiful, and intuitive digital experiences.</p>
-        <p>My expertise spans across full-stack development, with a particular love for creating seamless frontend interfaces that users genuinely enjoy interacting with.</p>
-        <div class="about-details">
-          <div class="about-detail">
-            <div class="about-detail-label">Location</div>
-            <div class="about-detail-value">Morocco</div>
+    <div class="section-label reveal"><i class="fas fa-user"></i> About Me</div>
+    <h2 class="section-title reveal reveal-delay-1">
+      Software Engineer obsessed with<br /><span class="text-stroke">clean</span> &amp; <span class="text-white-glow">fast</span> code
+    </h2>
+    <div class="about-grid">
+      <div class="about-avatar reveal">
+        <div class="about-avatar-ring">
+          <div class="about-avatar-inner">zwitn</div>
+        </div>
+        <div class="about-avatar-tag"><i class="fas fa-map-marker-alt"></i> Morocco</div>
+      </div>
+      <div class="about-text reveal reveal-delay-1">
+        <p>
+          I'm a passionate software engineer from Morocco who turns complex problems into
+          simple, beautiful, and intuitive digital experiences. My journey spans full-stack
+          development, Discord bot engineering, and open-source tooling.
+        </p>
+        <p>
+          I live by the terminal, write TypeScript by default, and obsess over performance,
+          accessibility, and pixel-perfect interfaces.
+        </p>
+        <div class="about-info-grid">
+          <div class="about-info">
+            <div class="about-info-label"><i class="fas fa-location-arrow"></i> Location</div>
+            <div class="about-info-value">Morocco</div>
           </div>
-          <div class="about-detail">
-            <div class="about-detail-label">Availability</div>
-            <div class="about-detail-value">Full-time / Freelance</div>
+          <div class="about-info">
+            <div class="about-info-label"><i class="fas fa-clock"></i> Availability</div>
+            <div class="about-info-value">Full-time / Freelance</div>
           </div>
-          <div class="about-detail">
-            <div class="about-detail-label">Focus</div>
-            <div class="about-detail-value">Full-Stack Development</div>
+          <div class="about-info">
+            <div class="about-info-label"><i class="fas fa-crosshairs"></i> Focus</div>
+            <div class="about-info-value">Full-Stack Development</div>
           </div>
-          <div class="about-detail">
-            <div class="about-detail-label">Languages</div>
-            <div class="about-detail-value">English, Arabic</div>
+          <div class="about-info">
+            <div class="about-info-label"><i class="fas fa-language"></i> Languages</div>
+            <div class="about-info-value">English, Arabic</div>
           </div>
         </div>
       </div>
@@ -97,105 +150,182 @@
   </div>
 </section>
 
-<section id="skills">
+<section id="skills" class="section">
   <div class="container">
-    <div class="section-label fade-in"><i class="fas fa-code"></i> Skills & Expertise</div>
-    <h2 class="section-title fade-in fade-in-delay-1">Technologies I work with</h2>
-    <p class="section-desc fade-in fade-in-delay-2">My tech stack and tools I use daily to build amazing products.</p>
+    <div class="section-label reveal"><i class="fas fa-code"></i> Skills &amp; Expertise</div>
+    <h2 class="section-title reveal reveal-delay-1">Technologies I work with</h2>
     <div class="skills-grid">
-      <div class="skill-category fade-in">
+      <div class="skill-category reveal">
         <h4><i class="fas fa-globe"></i> Frontend</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">Next.js</span>
-          <span class="skill-tag">TypeScript</span>
-          <span class="skill-tag">Tailwind CSS</span>
-          <span class="skill-tag">HTML/CSS</span>
-          <span class="skill-tag">JavaScript</span>
+        <div class="skill-bar-list">
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span>React</span><span class="skill-bar-pct" data-target="90">0%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span>TypeScript</span><span class="skill-bar-pct" data-target="85">0%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span>HTML / CSS</span><span class="skill-bar-pct" data-target="95">0%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+          </div>
         </div>
       </div>
-      <div class="skill-category fade-in fade-in-delay-1">
+      <div class="skill-category reveal reveal-delay-1">
         <h4><i class="fas fa-server"></i> Backend</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Node.js</span>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">MongoDB</span>
-          <span class="skill-tag">REST APIs</span>
+        <div class="skill-bar-list">
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span>Node.js</span><span class="skill-bar-pct" data-target="90">0%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span>Discord.js</span><span class="skill-bar-pct" data-target="92">0%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span>REST APIs</span><span class="skill-bar-pct" data-target="85">0%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
         </div>
       </div>
-      <div class="skill-category fade-in fade-in-delay-2">
-        <h4><i class="fas fa-tools"></i> Tools & DevOps</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Git</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">VS Code</span>
-          <span class="skill-tag">Figma</span>
-          <span class="skill-tag">Cloudflare</span>
-        </div>
-      </div>
-      <div class="skill-category fade-in fade-in-delay-3">
-        <h4><i class="fas fa-mobile-alt"></i> Other</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">UI/UX Design</span>
-          <span class="skill-tag">Responsive Design</span>
-          <span class="skill-tag">Performance</span>
-          <span class="skill-tag">Accessibility</span>
+      <div class="skill-category reveal reveal-delay-2">
+        <h4><i class="fas fa-tools"></i> Tools &amp; DevOps</h4>
+        <div class="skill-bar-list">
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span>Git / GitHub</span><span class="skill-bar-pct" data-target="90">0%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span>npm / Publishing</span><span class="skill-bar-pct" data-target="80">0%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span>Docker</span><span class="skill-bar-pct" data-target="70">0%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="projects">
+<section id="projects" class="section">
   <div class="container">
-    <div class="section-label fade-in"><i class="fas fa-folder-open"></i> Projects</div>
-    <h2 class="section-title fade-in fade-in-delay-1">Featured Project</h2>
-    <p class="section-desc fade-in fade-in-delay-2">My latest open-source package on GitHub and npm.</p>
-    <div class="project-card fade-in fade-in-delay-3">
-      <div class="project-card-header">
-        <i class="fab fa-npm"></i>
-        <span class="project-card-name">@zwitnziq/ziq</span>
+    <div class="section-label reveal"><i class="fas fa-folder-open"></i> Projects</div>
+    <h2 class="section-title reveal reveal-delay-1">Featured Work</h2>
+    <div class="projects-grid">
+      <article class="project-card tilt reveal">
+        <div class="project-card-top">
+          <div class="project-card-icon"><i class="fab fa-npm"></i></div>
+          <div class="project-card-links">
+            <a href="https://github.com/zwitn870/ziq" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.npmjs.com/package/@zwitnziq/ziq" target="_blank" rel="noopener" aria-label="npm"><i class="fab fa-npm"></i></a>
+          </div>
+        </div>
+        <div class="project-card-tags">
+          <span class="project-card-tag">Discord.js</span>
+          <span class="project-card-tag">TypeScript</span>
+          <span class="project-card-tag">CLI</span>
+          <span class="project-card-tag">npm</span>
+        </div>
+        <h3>@zwitnziq/ziq</h3>
+        <p class="project-card-name">Discord Message History Logger</p>
+        <p>Fetch, filter, replay, and export Discord channel messages as HTML, JSON, or PDF — with a full CLI and programmatic API.</p>
+      </article>
+      <article class="project-card tilt reveal reveal-delay-1">
+        <div class="project-card-top">
+          <div class="project-card-icon"><i class="fas fa-globe"></i></div>
+          <div class="project-card-links">
+            <a href="https://github.com/zwitn870/zwitn870.github.io" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="project-card-tags">
+          <span class="project-card-tag">HTML</span>
+          <span class="project-card-tag">CSS</span>
+          <span class="project-card-tag">JS</span>
+          <span class="project-card-tag">Three.js</span>
+        </div>
+        <h3>Portfolio v2</h3>
+        <p class="project-card-name">This very website</p>
+        <p>A monochrome neon-cyber portfolio with particle effects, 3D tilt cards, and modular architecture. Built from scratch.</p>
+      </article>
+      <article class="project-card project-card-coming tilt reveal reveal-delay-2">
+        <div class="project-card-top">
+          <div class="project-card-icon"><i class="fas fa-rocket"></i></div>
+        </div>
+        <div class="project-card-tags">
+          <span class="project-card-tag">Soon</span>
+        </div>
+        <h3>More Coming Soon</h3>
+        <p class="project-card-name">New open-source projects</p>
+        <p>This space is reserved for upcoming work. Stay tuned for something exciting.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-label reveal"><i class="fas fa-briefcase"></i> Experience</div>
+    <h2 class="section-title reveal reveal-delay-1">My Journey</h2>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2026 — Present</div>
+          <h3>Open Source Maintainer</h3>
+          <p>Author and maintainer of <strong>@zwitnziq/ziq</strong> — a Discord message history logger used by developers worldwide, published on npm.</p>
+        </div>
       </div>
-      <div class="project-card-tags">
-        <span class="project-card-tag">Discord.js</span>
-        <span class="project-card-tag">TypeScript</span>
-        <span class="project-card-tag">CLI</span>
-        <span class="project-card-tag">Node.js</span>
+      <div class="timeline-item reveal reveal-delay-1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2021 — Present</div>
+          <h3>Software Engineer</h3>
+          <p>Building full-stack applications and Discord bots with React, Node.js, and TypeScript — from idea to production.</p>
+        </div>
       </div>
-      <h3>Discord Message History Logger</h3>
-      <p>Fetch, filter, replay, and export Discord channel messages as HTML, JSON, or PDF. Comes with a full CLI and programmatic API.</p>
-      <div class="project-card-footer">
-        <a href="https://github.com/zwitn870/ziq" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://www.npmjs.com/package/@zwitnziq/ziq" target="_blank" rel="noopener"><i class="fab fa-npm"></i> npm</a>
+      <div class="timeline-item reveal reveal-delay-2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2021 — Present</div>
+          <h3>Freelance Developer</h3>
+          <p>Turning client ideas into production-ready products: design, development, deployment, and maintenance.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="contact-section">
+<section id="contact" class="section contact-section">
   <div class="container">
-    <div class="section-label fade-in"><i class="fas fa-paper-plane"></i> Contact</div>
-    <h2 class="section-title fade-in fade-in-delay-1">Let's work together</h2>
-    <p class="section-desc fade-in fade-in-delay-2" style="margin:0 auto;">Have a project in mind? I'd love to hear about it. Let's build something great.</p>
-    <div class="contact-card fade-in fade-in-delay-3">
-      <div class="contact-links">
-        <a href="https://github.com/zwitn870" class="contact-link" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="mailto:hodafassi1@gmail.com" class="contact-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
-      </div>
-      <a href="mailto:hodafassi1@gmail.com" class="contact-email"><i class="fas fa-envelope"></i> hodafassi1@gmail.com</a>
+    <div class="section-label reveal"><i class="fas fa-paper-plane"></i> Contact</div>
+    <h2 class="section-title reveal reveal-delay-1">Let's build something <span class="text-white-glow">great</span></h2>
+    <p class="section-desc reveal reveal-delay-2" style="margin:0 auto;">
+      Have a project in mind? I'd love to hear about it.
+    </p>
+    <div class="contact-actions reveal reveal-delay-3">
+      <a href="mailto:hodafassi1@gmail.com" class="btn btn-primary btn-lg"><i class="fas fa-envelope"></i> hodafassi1@gmail.com</a>
+      <a href="https://github.com/zwitn870" class="btn btn-outline btn-lg" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+    <div class="contact-social reveal reveal-delay-4">
+      <a href="https://github.com/zwitn870" class="social-link" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="mailto:hodafassi1@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.npmjs.com/package/@zwitnziq/ziq" class="social-link" target="_blank" rel="noopener" aria-label="npm"><i class="fab fa-npm"></i></a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>&copy; 2026 zwitn. Built with ZIQ</p>
+  <p>&copy; 2026 zwitn. Built with ZIQ.</p>
+  <p class="footer-code">// keep building ✦ keep shipping</p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="js/particles.js"></script>
 <script src="js/typing.js"></script>
-<script src="js/animations.js"></script>
+<script src="js/reveal.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

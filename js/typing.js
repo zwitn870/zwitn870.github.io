@@ -1,5 +1,5 @@
 const TypingEffect = (() => {
-  const words = ['Software Engineer', 'Full-Stack Developer', 'UI Enthusiast', 'Problem Solver'];
+  const words = ['Software Engineer', 'Full-Stack Developer', 'Open Source Maintainer', 'Discord Bot Developer', 'Problem Solver'];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
@@ -20,7 +20,7 @@ const TypingEffect = (() => {
 
       if (charIndex === current.length) {
         isDeleting = true;
-        setTimeout(type, 2000);
+        setTimeout(type, 1800);
         return;
       }
     } else {
@@ -33,7 +33,7 @@ const TypingEffect = (() => {
       }
     }
 
-    setTimeout(type, isDeleting ? 50 : 100);
+    setTimeout(type, isDeleting ? 45 : 90);
   }
 
   return { init };
